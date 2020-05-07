@@ -34,7 +34,7 @@ steps:
   inputs:
     command: 'pack'
     arguments: '--configuration $(buildConfiguration) --force'
-    packagesToPack: '**\*.csproj;!**\*.Tests/*.csproj'
+    packagesToPack: '**/*.csproj;!**/*.Tests/*.csproj'
     versionEnvVar: '1.0.0.1'
 
 - task: NuGetCommand@2
