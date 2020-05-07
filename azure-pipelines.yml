@@ -22,7 +22,7 @@ steps:
   inputs:
     command: build
     projects: '**/*.csproj'
-    arguments: '--configuration Release' # Update this to match your need
+    arguments: '--configuration $(buildConfiguration)'
 - task: DotNetCoreCLI@2
   displayName: 'dotnet test'
   inputs:
@@ -36,7 +36,6 @@ steps:
     arguments: '--configuration $(buildConfiguration) --force'
     packagesToPack: '**/*.csproj;!**/*.Tests/*.csproj'
     versionEnvVar: '1.0.0.1'
-
 - task: NuGetCommand@2
   displayName: 'nuget push'
   inputs:
