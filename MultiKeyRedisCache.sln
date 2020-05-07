@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiKeyRedisCache", "MultiKeyRedisCache\MultiKeyRedisCache.csproj", "{4FD30C82-348D-400C-9383-0A1F230EB698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiKeyRedisCache.Tests", "MultiKeyRedisCache.Tests\MultiKeyRedisCache.Tests.csproj", "{49BB6588-1AA9-4CC0-B3D9-3D7234E23AEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FD30C82-348D-400C-9383-0A1F230EB698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD30C82-348D-400C-9383-0A1F230EB698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD30C82-348D-400C-9383-0A1F230EB698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD30C82-348D-400C-9383-0A1F230EB698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BB6588-1AA9-4CC0-B3D9-3D7234E23AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BB6588-1AA9-4CC0-B3D9-3D7234E23AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BB6588-1AA9-4CC0-B3D9-3D7234E23AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BB6588-1AA9-4CC0-B3D9-3D7234E23AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01C8CBBA-50AD-4C27-99B7-D8BC8AB1E2ED}
+	EndGlobalSection
+EndGlobal
