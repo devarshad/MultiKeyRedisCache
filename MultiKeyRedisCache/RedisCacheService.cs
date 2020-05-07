@@ -13,6 +13,17 @@ namespace MultiKeyRedisCache
 
         private IDatabase Database => Connection.GetDatabase();
 
+        public RedisCacheService(string ConnectionString) : this(new Lazy<ConnectionMultiplexer>(() =>
+          {
+              ConfigurationOptions options = ConfigurationOptions.Parse(ConnectionString);
+              options.AllowAdmin = true;
+              options.SyncTimeout = 30000;
+              return ConnectionMultiplexer.Connect(options);
+          }))
+        {
+
+        }
+
         public RedisCacheService(Lazy<ConnectionMultiplexer> connectionMultiplexer) => this._connectionMultiplexer = connectionMultiplexer;
         public async Task Clear(params string[] keys)
         {
