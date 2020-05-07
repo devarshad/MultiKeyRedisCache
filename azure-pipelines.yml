@@ -20,8 +20,7 @@ steps:
   inputs:
     command: restore
     projects: '**/*.csproj'
-    feedsToUse: config
-    nugetConfigPath: NuGet.config    # Relative to root of the repository
+    feedsToUse: 'select'
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
@@ -48,5 +47,5 @@ steps:
     feedsToUse: 'select'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
     nuGetFeedType: 'internal'
-    publishVstsFeed: 'ArshadFeed'
+    publishVstsFeed: 'getarshad4uk'
     versioningScheme: 'off'
