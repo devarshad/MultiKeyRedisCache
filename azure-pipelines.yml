@@ -24,6 +24,7 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
 - task: DotNetCoreCLI@2
+  displayName:'Tests'
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
@@ -31,8 +32,11 @@ steps:
 - task: NuGetCommand@2
   displayName: "dotnet pack"
   inputs:
-    command: pack
-    packagesToPack: '**/*.csproj'
+    command: 'pack'
+    arguments: '--configuration $(buildConfiguration)'
+    projects: '**/*.csproj'
+    versioningScheme: 'off'
+
 - task: NuGetCommand@2
   displayName: 'nuget push'
   inputs:
