@@ -33,7 +33,7 @@ steps:
   inputs:
     command: 'pack'
     arguments: '--configuration $(buildConfiguration)'
-    packagesToPack: '**/*Tests/*.csproj'
+    projects: '**/*.csproj'
     nobuild: true
     versioningScheme: 'off'
 - task: NuGetCommand@2
