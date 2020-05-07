@@ -18,7 +18,7 @@ steps:
     feedsToUse: 'select'
     includeNuGetOrg: true
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet build''
+  displayName: 'dotnet build'
   inputs:
     command: build
     projects: '**/*.csproj'
@@ -33,9 +33,8 @@ steps:
   displayName: "nuget pack"
   inputs:
     command: 'pack'
-    arguments: '--configuration $(buildConfiguration)'
+    arguments: '--configuration $(buildConfiguration) --force'
     packagesToPack: '**\*.csproj;!**\*.Tests/*.csproj'
-    nobuild: true
     versioningScheme: 'off'
 
 - task: NuGetCommand@2
